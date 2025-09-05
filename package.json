@@ -24,6 +24,7 @@
     "author": "Yasas Senarath <12231659+ysenarath@users.noreply.github.com>",
     "license": "MIT",
     "dependencies": {
+        "pdfjs-dist": "^5.4.149",
         "ramda": "^0.26.1"
     },
     "devDependencies": {
