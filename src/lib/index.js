@@ -1,6 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import DashPdfjs from './components/DashPdfjs.react';
+import DashPdfjs from "./components/DashPdfjs.react";
 
-export {
-    DashPdfjs
-};
+export { DashPdfjs };
