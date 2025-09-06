@@ -1,43 +1,40 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
 /**
- * ExampleComponent is an example component.
+ * ExampleTextbox is an example component.
  * It takes a property, `label`, and
  * displays it.
  * It renders an input with the property `value`
  * which is editable by the user.
  */
-const DashPdfjs = (props) => {
+const ExampleTextbox = (props) => {
     const {id, label, setProps, value} = props;
 
     const handleInputChange = (e) => {
         /*
-        * Send the new value to the parent component.
-        * setProps is a prop that is automatically supplied
-        * by dash's front-end ("dash-renderer").
-        * In a Dash app, this will update the component's
-        * props and send the data back to the Python Dash
-        * app server if a callback uses the modified prop as
-        * Input or State.
-        */
-        setProps({ value: e.target.value });
+         * Send the new value to the parent component.
+         * setProps is a prop that is automatically supplied
+         * by dash's front-end ("dash-renderer").
+         * In a Dash app, this will update the component's
+         * props and send the data back to the Python Dash
+         * app server if a callback uses the modified prop as
+         * Input or State.
+         */
+        setProps({value: e.target.value});
     };
 
     return (
         <div id={id}>
             ExampleComponent: {label}&nbsp;
-            <input
-                value={value}
-                onChange={handleInputChange}
-            />
+            <input value={value} onChange={handleInputChange} />
         </div>
     );
-}
+};
 
-DashPdfjs.defaultProps = {};
+ExampleTextbox.defaultProps = {};
 
-DashPdfjs.propTypes = {
+ExampleTextbox.propTypes = {
     /**
      * The ID used to identify this component in Dash callbacks.
      */
@@ -57,7 +54,7 @@ DashPdfjs.propTypes = {
      * Dash-assigned callback that should be called to report property changes
      * to Dash, to make them available for callbacks.
      */
-    setProps: PropTypes.func
+    setProps: PropTypes.func,
 };
 
-export default DashPdfjs;
+export default ExampleTextbox;

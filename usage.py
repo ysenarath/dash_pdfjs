@@ -5,8 +5,16 @@ app = Dash(__name__)
 
 app.layout = html.Div(
     [
-        dash_pdfjs.DashPdfjs(id="input", value="my-value", label="my-label"),
+        dash_pdfjs.ExampleTextbox(id="input", value="my-value", label="my-label"),
         html.Div(id="output"),
+        # PdfHighlighter
+        dash_pdfjs.PdfHighlighter(
+            id="pdf-viewer",
+            # public url
+            src="https://arxiv.org/pdf/1708.08021.pdf",
+            highlights=[],
+            style={"height": "90vh", "border": "1px solid #ccc"},
+        ),
     ]
 )
 

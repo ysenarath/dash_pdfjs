@@ -1,4 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import DashPdfjs from "./components/DashPdfjs.react";
+import ExampleTextbox from './components/ExampleTextbox.react';
+import PdfHighlighter from './components/PdfHighlighter.react';
 
-export { DashPdfjs };
+export {ExampleTextbox, PdfHighlighter};
